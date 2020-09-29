@@ -89,6 +89,7 @@
   let url = '/profile';
   fetch(url)
   .then( data =>{
+    console.log(data);
     appInit(data.username,data.avatar);
   })
   .catch(err => next(err));
