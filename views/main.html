@@ -87,7 +87,9 @@
 <script type="text/javascript">
 (function () {
   let url = '/profile';
-  fetch(url)
+  fetch(url, {
+    method: GET
+  })
   .then( data =>{
     console.log(data);
     appInit(data.username,data.avatar);
