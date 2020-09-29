@@ -85,10 +85,14 @@
 <script src="/socket.io/socket.io.js"></script>
 <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
 <script type="text/javascript">
-$(function () {
-    $.get('http://localhost:8080/profile', {}, function(data){
-      appInit(data.username,data.avatar);
-   });
+(function () {
+  let url = '/profile';
+  fetch(url)
+  .then( data =>{
+    appInit(data.username,data.avatar);
+  })
+  .catch(err => next(err));
+})();
 
 function getEventTarget(e) {
   e = e || window.event;
