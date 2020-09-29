@@ -27,7 +27,7 @@ const port= process.env.PORT || 8080;
 //connect to mongoDb
 mongoose.set('useCreateIndex', true);
 mongoose
-.connect(proccess.env.MONGODB_URI || 'mongodb://localhost/defaultDatabase',{ useNewUrlParser: true })
+.connect(process.env.MONGODB_URI || 'mongodb://localhost/defaultDatabase',{ useNewUrlParser: true })
 .then(() => console.log( 'Database Connected' ))
 .catch(err => console.log( err ));;
 
