@@ -85,15 +85,12 @@
 <script src="/socket.io/socket.io.js"></script>
 <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
 <script type="text/javascript">
-(function () {
-  let url = window.location.href + '/profile';
-  fetch(url)
-  .then( data =>{
-    console.log(data);
-    appInit(data.username,data.avatar);
-  })
-  .catch(err => next(err));
-})();
+$(function () {
+   let url= window.location.origin + '/profile';
+    $.get(url, {}, function(data){
+      appInit(data.username,data.avatar);
+    });
+});
 
 function getEventTarget(e) {
   e = e || window.event;
@@ -190,7 +187,6 @@ function appInit(uName,avatarName){
     });
 
     socket.on('usernames',(data)=>{
-      console.log(data);
       var str='';
       $('#contact-list ul').html("");
       for(i=0;i<data.usernames.length;i++) {
