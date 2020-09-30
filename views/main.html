@@ -86,10 +86,8 @@
 <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
 <script type="text/javascript">
 (function () {
-  let url = '/profile';
-  fetch(url, {
-    method: GET
-  })
+  let url = window.location.href + '/profile';
+  fetch(url)
   .then( data =>{
     console.log(data);
     appInit(data.username,data.avatar);
