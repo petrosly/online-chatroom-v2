@@ -16,8 +16,8 @@ let Token = require("../models/token");
 let transporter = nodemailer.createTransport({
   service: 'gmail',
   auth:{
-    user: process.env.EMAIL || 'plymperchat@gmail.com',
-    pass: process.env.PASSWORD || 'Chatemail1!'
+    user: process.env.EMAIL ,
+    pass: process.env.PASSWORD
   },
   tls: {
     rejectUnauthorized: false
