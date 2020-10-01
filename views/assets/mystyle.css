@@ -146,7 +146,11 @@ textarea{
   overflow: hidden;
   text-overflow: ellipsis;
   overflow-y: scroll;
-  height: 500px;
+  height: 675px;
+}
+
+#submit-button{
+  margin-top: 20px;
 }
 
 #message-area::-webkit-scrollbar-track{

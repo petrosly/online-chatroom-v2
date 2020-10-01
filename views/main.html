@@ -15,7 +15,7 @@
       <div class="col-md-1 hidden">
       </div>
       <div class="col-md-1 features">
-        <a href ="/users/logout"><button type="submit"><i class="fa fa-times"></i></button></a>
+        <a href ="/users/logout"><button type="submit"><i class="fa fa-times"> Logout</i></button></a>
       </div>
       <div class="col-md-3 contacts-half">
         <div class="search-container">
@@ -70,7 +70,7 @@
               <div class="col-md-8">
               </div>
               <div class="col-md-4 snd">
-              <input class="snd btn btn-default" type="submit"></input>
+                <input id="submit-button" class="snd btn btn-default" type="submit"></input>
               </div>
             </div>
           </form>
@@ -215,7 +215,7 @@ function appInit(uName,avatarName){
       $(this).children(".fa-exclamation-circle").hide();
       $("#send-message").removeClass("hidden");
       $("#message-area").removeClass("hidden");
-      $("#message-area").css({"overflow": "hidden","text-overflow": "ellipsis","overflow-y": "scroll","height": "380px"});
+      $("#message-area").css({"overflow": "hidden","text-overflow": "ellipsis","overflow-y": "scroll","height": "590px"});
       $("#message-area").html('');
       var receiverName = new String($(this).text());
       receiverName = receiverName.trim();
